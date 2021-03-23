@@ -2,15 +2,21 @@ package EmpWageBuilder;
 
 public class EmpWageBuilder {
 public static void main(String[] args){
-		
-		//stem.out.println("Welcome To Employee Wage Computation Program");
-	//to check is emp present or not 
-		int Is_EmpPresent=1;
-		double empCheck = Math.floor(Math.random() * 10 ) % 2 ;
-		if(empCheck == Is_EmpPresent)
-			System.out.println("EMPLOYEE IS PRESENT ");
-		else
-			System.out.println("EMPLOYEE IS ABSENT ");
-	
+		//calculate daily wages 
+	//constants
+	int IsEmpPresent=1;
+	int EMP_RATE_PER_HOUR =20;
+	//Variable
+	int empHrs =0;
+	int empWage =0;
+	//computation
+	double empCheck = Math.floor(Math.random() * 10 ) % 2 ;
+	if(empCheck == IsEmpPresent)
+		empHrs =8;
+	else
+		empHrs =0;
+	empWage = empHrs *  EMP_RATE_PER_HOUR;
+	System.out.println("Emp WAGE " +empWage );
+
 	}
 }
